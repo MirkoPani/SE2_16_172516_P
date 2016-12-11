@@ -1,0 +1,34 @@
+<!-- views/pages/news.ejs -->
+
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <% include ../partials/head %>
+</head>
+
+<body class="container">
+
+
+    <% include ../partials/sidebar %>
+
+    <p class="pageTitle">Notizie </p>
+        <% for(var i=0; i < data.length; i++) { %>
+            <div class="panel panel-default" id="<%= i %>">
+                <div class="panel-heading" >
+                    <h3 class="panel-title">  <%= data[i].title %></h3>
+                </div>
+                <div class="panel-body">
+                  <p onclick="hide(<%=i %>);" class="hint">Clicca per nascondere</p>
+                    <%= data[i].text %>
+                </div>
+            </div>
+            <% } %>
+
+
+
+                <% include ../partials/footer %>
+                <script src="js/news.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!-- views/pages/searchRoom.ejs -->
+
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <% include ../partials/head %>
+</head>
+
+<body class="container">
+
+
+    <% include ../partials/sidebar %>
+
+    <p class="pageTitle">Cerca Stanza </p>
+
+<form>
+  <p>Inserisci la stanza da cercare:</p>
+  <input type="text" id="txtinput" placeholder="stanza"/>
+  <button id="btnSearch">Cerca</button>
+</form>
+
+                <% include ../partials/footer %>
+                <script src="js/searchRoom.js"></script>
+</body>
+
+</html>

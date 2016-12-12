@@ -1,7 +1,12 @@
 # SE2_16_172516_P
+
 Per usare:
+
 npm install
 node server.js
 http://localhost:8080
+
+Per testing:
+npm test
 
 Utilizza express, body-parser, ejs

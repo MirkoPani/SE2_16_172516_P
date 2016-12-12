@@ -30,10 +30,13 @@ app.get('/searchRoom', function(req, res) {
 //Richiesta POST a /searchRoom per ottenere il luogo di una stanza.
 app.post('/searchRoom/', function(request, response) {
     var aula;
-    if(request.body.room!=""){
-            aula = roomsModel.getRoom(request.body.room.toLowerCase());
+    if (request.body.room != undefined && request.body.room != "") {
+        aula = roomsModel.getRoom(request.body.room.toLowerCase());
+        response.send(JSON.stringify(aula));
+    } else {
+        response.sendStatus(406);
     }
-    response.send(JSON.stringify(aula));
+
 });
 
 // start the server

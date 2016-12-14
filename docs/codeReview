@@ -1,0 +1,23 @@
+--------------------
+Code Review
+Autore: Mirko Pani 172516
+Revisione del codice di: Silvio Biasiol
+Git del codice revisionato: https://github.com/silvioBi/progetto-SE2
+--------------------
+index.js
+- I dati dovrebbero essere gestiti da un modello in componenti separati, invece sono codificati nel file index.js principale del server.
+- Non è chiaro a cosa servano i dati.
+
+public/js/script.js
+- Nessun commento.
+- Sembra che ci sia una duplicazione dei dati rispetto a quanto ricevuto dal server.
+
+index.ejs
+- Img non hanno attributo alt
+- Include pagine non ancora completate
+rate.ejs
+- Manca implementazione
+settings.ejs
+- Manca implementazione
+diet-ejs
+- Manca implementazione

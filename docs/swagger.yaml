@@ -1,0 +1,49 @@
+---
+swagger: '2.0'
+info:
+  version: 0.0.0
+  title: Simple API
+paths:
+  /:
+    get:
+      summary: Get index page
+      responses:
+        200:
+          description: OK
+  /news:
+    get:
+      summary: Get news page
+      responses:
+        200:
+          description: OK
+  /searchRoom:
+    get:
+      summary: Get SearchRoom page
+      responses:
+        200:
+          description: OK
+    post:
+      summary: Richiesta per ottenere l'oggetto stanza.
+      parameters:
+        - name: room
+          in: query
+          description: Stringa del nome della stanza richiesta
+          required: true
+          type: string
+      responses:
+        200:
+          description: Oggetto stanza ritornato dal modello.
+          schema:
+            $ref: '#/definitions/Room'
+        406:
+          description: Errore se parametro room non valido
+          
+definitions:
+  
+  Room:
+    type: object
+    properties:
+      name:
+        type: string
+      place:
+        type: string
